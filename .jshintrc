@@ -1,0 +1,19 @@
+{
+	"bitwise" : true,
+	"eqeqeq": true,
+	"forin" : true,
+	"immed": true,
+	"latedef" : true,
+	"newcap" : true,
+	"noarg": true,
+	"noempty": true,
+	"nonew":true,
+	"quotmark": "double",
+	"undef" : true,
+	"unused" : true,
+	"strict" : true,
+	"browser": true,
+	"devel" : true,
+	"jquery" : true,
+	"globals" : {"require":false ,"define" : false}
+}
