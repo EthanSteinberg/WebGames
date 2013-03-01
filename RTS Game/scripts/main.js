@@ -1,8 +1,6 @@
-require(["canvas"], function(c) {
+require(["game"], function(c) {
 
 	"use strict";
 
-	console.log("foos");
-	console.log(c);
-	c.draw();
+	c.run();
 });

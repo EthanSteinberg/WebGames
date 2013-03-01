@@ -1,0 +1,27 @@
+{
+	"directory": "assets",
+	"images" : {
+		"PathAndObjects_0" : {
+			"url" : "PathAndObjects_0.png"
+		},
+		"fox": {
+			"url" : "firefox.png"
+		},
+		"tiletwo" : {
+			"url" : "tiletwo.png"
+		}
+	},
+	"maps" : {
+		"first" : {
+			"url" : "tilemap.json"
+		}
+	},
+	"tilesets" : {
+		"firstTileMap": {
+			"tiles" : {
+				"1": "tileone",
+				"2": "tiletwo"
+			}
+		}
+	}
+}
