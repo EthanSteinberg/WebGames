@@ -1,62 +1,69 @@
-define(["canvas","assetManager","inputManager","view","character"], function (canvas,assetManager,inputManager,view,character)
+define(["canvas","assetManager","inputManager","view","character","building","sideBar","level"], function (canvasName,assetManager,inputManagerName,view,character,building,sideBar,level)
 {
 	"use strict";
 
-	var self = {};
+	
 
 
-
-	self.run = function()
+	function Game()
 	{
 		assetManager.load("assets.json",function()
 		{
-			inputManager.init(canvas);
-			inputManager.suppress(40);
+			this.canvas = new canvasName.Canvas("gameCanvas");
+			this.inputManager = new inputManagerName.InputManager(this.canvas);
+			this.inputManager.suppress(40);
+			this.sideBar = new sideBar.SideBar();
 
-			inputManager.addClickHandler(function(x,y)
+			this.inputManager.addClickHandler(function(x,y)
 			{
 				console.log(x,y);
 			});
 
-			self.view = new view.View("first");
+			this.view = new view.View(this);
 
-			window.requestAnimationFrame(self.mainLoop);
+			this.level = new level.Level(this,"first");
 			
 
+			window.requestAnimationFrame(this.mainLoop.bind(this));
 
-		});
+		}.bind(this));
+	}
 
-	};
 
-	self.mainLoop = function(time)
+	Game.prototype.mainLoop = function(time)
 	{
 		
-		window.requestAnimationFrame(self.mainLoop);
+		window.requestAnimationFrame(this.mainLoop.bind(this));
 
-		if (!self.lastTime)
-			self.lastTime = time;
+		if (!this.lastTime)
+			this.lastTime = time;
 
-		self.update(time-self.lastTime);
-		self.lastTime = time;
-		self.draw();
+		this.update(time-this.lastTime);
+		this.lastTime = time;
+		this.draw();
 	};
 
 
-	self.update = function(delta)
+	Game.prototype.update = function(delta)
 	{
 
-		self.view.update(delta);
+		this.view.update(delta);
+		this.level.update(delta);
 	};
 
-	self.draw = function()
+	Game.prototype.draw = function()
 	{
-		canvas.clear();
+		this.canvas.clear();
 
-		self.view.draw(canvas);
+		this.view.transform(this.canvas);
 
+
+		this.level.draw(this.canvas);
 
 		
 	};
 
+	var self = {};
+	self.Game = Game;
 	return self;
 });

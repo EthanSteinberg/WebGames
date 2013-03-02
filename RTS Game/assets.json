@@ -1,14 +1,14 @@
 {
 	"directory": "assets",
 	"images" : {
-		"PathAndObjects_0" : {
-			"url" : "PathAndObjects_0.png"
-		},
 		"fox": {
 			"url" : "firefox.png"
 		},
-		"tiletwo" : {
-			"url" : "tiletwo.png"
+		"building" : {
+			"url" : "building.png"
+		},
+		"controlMenu" : {
+			"url" : "controlMenu.png"
 		}
 	},
 	"maps" : {

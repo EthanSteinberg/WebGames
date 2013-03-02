@@ -2,10 +2,23 @@
 <map version="1.0" orientation="orthogonal" width="100" height="100" tilewidth="32" tileheight="32">
  <tileset firstgid="1" name="PathAndObjects_0" tilewidth="32" tileheight="32">
   <image source="PathAndObjects_0.png" width="512" height="512"/>
+  <terraintypes>
+   <terrain name="New Terrain" tile="23"/>
+   <terrain name="New Terrain" tile="-1"/>
+  </terraintypes>
  </tileset>
- <layer name="Tile Layer 1" width="100" height="100">
+ <tileset firstgid="257" name="tileset" tilewidth="32" tileheight="32">
+  <image source="tileset.png" width="128" height="128"/>
+ </tileset>
+ <layer name="VisableLayer" width="100" height="100">
   <data encoding="base64" compression="zlib">
    eJzt18EJwkAQQNG5awfagTYt2oCxArECsSEjKFnQkOwkoof3YE65zWezSRMRzXNO7Rye08w01Cl3p8fvlbu7RNfjHJ/3uxgxy9Ajqzwbt+h6XNs5xnuP1YhZhx5Zn95Vryl7lPvuezfpMV25z310LXbxvucx94Ue0wzttqbFa/TIG2ox1Mn9Ma+aFn37fzzbFLMNPbLG3gl9Hfx/zOtbHfTIqbkbajrokfONM6FH3tC3UraDHjl6/Jep+9bjP9g3AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPd3RR0bw=
   </data>
  </layer>
+ <layer name="CollisionLayer" width="100" height="100">
+  <data encoding="base64" compression="zlib">
+   eJzt0aENAEAIBEHov+kXBIF9dWIm2Qq26uqeyOBHFj9y7AtPMviRxwsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD49wCZjQAh
+  </data>
+ </layer>
+ <imagelayer name="Image Layer 1" width="100" height="100"/>
 </map>

@@ -1,6 +1,6 @@
-require(["game"], function(c) {
+require(["game"], function(game) {
 
 	"use strict";
 
-	c.run();
+	var game = new game.Game();
 });

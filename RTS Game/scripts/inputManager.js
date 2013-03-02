@@ -1,30 +1,32 @@
 define(function()
 {
 	"use strict";
-	var self = {};
+	
 
-	self.init = function(canvas) {
+	function InputManager(canvas)
+	{
+		this.keyDict = {};
+		this.callbackDict = {};
+		this.supressedKeys = {};
+		this.clickHandlers = [];
 
-		self.keyDict = {};
-		self.callbackDict = {};
-		self.supressedKeys = {};
-		self.clickHandlers = [];
+		this.clickManipulator = null;
 
 		$(document).keydown(function (event)
 		{
 
 
-			self.keyDict[event.which] = true;
+			this.keyDict[event.which] = true;
 
-			if (self.callbackDict[event.which])
+			if (this.callbackDict[event.which])
 			{
-				for (var i =0 ; i < self.callbackDict[event.which].length;i++)
+				for (var i =0 ; i < this.callbackDict[event.which].length;i++)
 				{
-					self.callbackDict[event.which][i]();
+					this.callbackDict[event.which][i]();
 				}
 			}
 
-			if (self.supressedKeys[event.which])
+			if (this.supressedKeys[event.which])
 			{
 				console.log("Suppressed?");
 				return false;
@@ -32,7 +34,7 @@ define(function()
 				
 			else
 				return true;
-		});
+		}.bind(this));
 
 
 		$(document).click(function (event)
@@ -42,54 +44,67 @@ define(function()
 			var x = event.pageX - canvas.canvas.offsetLeft;
 			var y = event.pageY - canvas.canvas.offsetTop;
 
-			for (var i = 0; i < self.clickHandlers.length; i++)
+			if (x >= canvas.canvas.width || y >= canvas.canvas.height || x < 0 || y < 0)
+				return;
+
+			if (this.clickManipulator)
 			{
-				self.clickHandlers[i](x,y);
+				var manipulated = this.clickManipulator(x,y);
+				x = manipulated.x;
+				y = manipulated.y;
+			}
+
+			for (var i = 0; i < this.clickHandlers.length; i++)
+			{
+				this.clickHandlers[i](x,y);
 
 			}
-		});
+		}.bind(this));
 
-
-		
 		$(document).keypress(function(event) 
 		{
 			console.log(event);
 			
 
-		});
+		}.bind(this));
 
 		$(document).keyup(function (event)
 		{
-			self.keyDict[event.which] = false;
+			this.keyDict[event.which] = false;
 			return true;
-		});		
-
-
-
-	};
-
-	self.addCallback = function(keyCode,callback)
-	{
-		if (!self.callbackDict[keyCode])
-			self.callbackDict[keyCode] = [];
-
-		self.callbackDict[keyCode].push(callback);
-	};
-
-	self.isPressed = function(keyCode)
-	{
-		return self.keyDict[keyCode];
-	};
-
-	self.suppress = function(keyCode)
-	{
-		self.supressedKeys[keyCode] = true;
-	};
-
-	self.addClickHandler = function(callback)
-	{
-		self.clickHandlers.push(callback);
+		}.bind(this));		
 	}
 
+
+	InputManager.prototype.addCallback = function(keyCode,callback)
+	{
+		if (!this.callbackDict[keyCode])
+			this.callbackDict[keyCode] = [];
+
+		this.callbackDict[keyCode].push(callback);
+	};
+
+	InputManager.prototype.isPressed = function(keyCode)
+	{
+		return this.keyDict[keyCode];
+	};
+
+	InputManager.prototype.suppress = function(keyCode)
+	{
+		this.supressedKeys[keyCode] = true;
+	};
+
+	InputManager.prototype.addClickHandler = function(callback)
+	{
+		this.clickHandlers.push(callback);
+	}
+
+	InputManager.prototype.setClickManipulator = function(callback)
+	{
+		this.clickManipulator =  callback;
+	}
+
+	var self = {};
+	self.InputManager = InputManager;
 	return self;
 });

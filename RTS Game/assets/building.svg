@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="64"
+   height="64"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="building.svg"
+   inkscape:export-filename="C:\Users\ethan_000\Desktop\WebGames\RTS Game\assets\building.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2"
+     inkscape:cx="175.6219"
+     inkscape:cy="33.3453"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:snap-to-guides="false"
+     inkscape:snap-grids="false"
+     inkscape:window-width="1098"
+     inkscape:window-height="702"
+     inkscape:window-x="260"
+     inkscape:window-y="260"
+     inkscape:window-maximized="0"
+     inkscape:object-nodes="false"
+     inkscape:snap-smooth-nodes="false"
+     inkscape:object-paths="false">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2985"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true"
+       spacingx="32px"
+       spacingy="32px" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-988.36218)">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 0.17857143,1006.8265 64.642857,1007.005 31.964285,988.96932 z"
+       id="path3005"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="fill:#ffccaa;fill-opacity:1;stroke:none"
+       id="rect3007"
+       width="64.10714"
+       height="45.357143"
+       x="0"
+       y="18.821428"
+       transform="translate(0,988.36218)" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="13.035714"
+       y="1022.7193"
+       id="text3009"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3011"
+         x="13.035714"
+         y="1022.7193"
+         style="font-size:10px">Building</tspan></text>
+    <path
+       style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
+       d="m 15.879464,1024.7193 a 0.50005,0.50005 0 0 0 -0.34375,0.5 l 0,22.75 -5.53125,-9.5313 a 0.50005,0.50005 0 0 0 -0.4999997,-0.2812 0.50005,0.50005 0 0 0 -0.34375,0.7812 l 6.3749997,11.0313 a 0.50005,0.50005 0 0 0 0.03125,0.094 l 0.03125,0.031 a 0.50005,0.50005 0 0 0 0.03125,0.031 0.50389111,0.50389111 0 0 0 0.09375,0.125 0.50005,0.50005 0 0 0 0.03125,0.031 0.50389111,0.50389111 0 0 0 0.09375,0.062 0.50005,0.50005 0 0 0 0.03125,0 0.50389111,0.50389111 0 0 0 0.03125,0 0.50005,0.50005 0 0 0 0.03125,0 0.50389111,0.50389111 0 0 0 0.21875,0 0.50005,0.50005 0 0 0 0.0625,-0.031 0.50389111,0.50389111 0 0 0 0.25,-0.2187 l 0.03125,-0.062 a 0.50389111,0.50389111 0 0 0 0.03125,-0.062 l 7.1875,-12.4063 a 0.50389111,0.50389111 0 0 0 -0.875,-0.5 l -6.3125,10.9063 0,-22.75 a 0.50005,0.50005 0 0 0 -0.65625,-0.5 z"
+       id="path3001"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

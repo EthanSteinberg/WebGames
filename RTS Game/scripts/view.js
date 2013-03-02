@@ -1,7 +1,7 @@
-define(["inputManager", "assetManager","tilemap","character"],function(inputManager,assetManager,tilemap,character){
+define(function(){
 "use strict";
 
-	function View(mapName)
+	function View(game)
 	{
 		this.x = 0;
 		this.y = 0;
@@ -9,47 +9,43 @@ define(["inputManager", "assetManager","tilemap","character"],function(inputMana
 		this.clickHandlers = [];
 
 
-		this.tilemap = new tilemap.TileMap(assetManager.getMap(mapName));
-		this.char = new character.Character(this);
+		
+		this.game = game;
 
-		inputManager.addClickHandler(function(x,y)
+		console.log(game);
+
+		game.inputManager.setClickManipulator(function(x,y)
 		{
 			var realX = Math.floor(x/32 + this.x);
 			var realY = Math.floor(y/32 + this.y);
-			console.log(realX,realY);
 
-			for (var i =0 ; i < this.clickHandlers.length; i++)
-			{
-				this.clickHandlers[i](realX,realY);
-			}
-		}.bind(this));;
+			return {x:realX, y: realY};
+		}.bind(this));
+
 
 	}
 
-	View.prototype.addClickHandler = function(callback)
-	{
-		this.clickHandlers.push(callback);
-	}
 
 	View.prototype.update = function(delta)
 	{
-		if (inputManager.isPressed(40))
+		if (this.game.inputManager.isPressed(40))
 			this.y += delta * 0.005;
-		if (inputManager.isPressed(38))
+		if (this.game.inputManager.isPressed(38))
 			this.y -= delta * 0.005;
-		if (inputManager.isPressed(37))
+		if (this.game.inputManager.isPressed(37))
 			this.x -= delta * 0.005;
-		if (inputManager.isPressed(39))
+		if (this.game.inputManager.isPressed(39))
 			this.x += delta * 0.005;
 
-		this.char.update(delta);
+		
 	};
 
-	View.prototype.draw = function(canvas)
+	View.prototype.transform = function(canvas)
 	{
 		
-		this.tilemap.draw(canvas,this.x,this.y);
-		this.char.draw(canvas,this.x,this.y);
+		canvas.ctx.setTransform(1,0,0,1,Math.round(-this.x*32),Math.round(-this.y*32));
+		//canvas.ctx.setTransform(1,0,0,1,32,0);
+
 	};
 
 

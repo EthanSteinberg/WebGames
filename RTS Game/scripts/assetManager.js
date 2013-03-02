@@ -1,4 +1,4 @@
-define(function()
+define(["tilemap"], function(tilemap)
 {
 	"use strict";
 
@@ -43,13 +43,12 @@ define(function()
 		{
 			return function(json)
 			{
-				mapsArr[name].json = json;
-
-
-				loadsLeft--;
-				if (loadsLeft === 0)
-					callback();
-
+				mapsArr[name] = new tilemap.TileMap(json, function()
+				{ 
+					loadsLeft--;
+					if (loadsLeft === 0)
+						callback();
+				});
 			};	
 		}
 
@@ -63,6 +62,13 @@ define(function()
 
 	self.load = function(jsonName,callback)
 	{
+
+		if (self.loaded)
+		{
+			callback();
+			return;
+		}
+		
 		console.log("Request");
 		$.getJSON(jsonName, function (json)
 		{
@@ -76,7 +82,7 @@ define(function()
 					self.loaded = true;
 					callback();
 				});
-					
+
 
 			});
 
@@ -96,7 +102,7 @@ define(function()
 	self.getMap = function(mapName)
 	{
 		console.assert(self.loaded === true,"Asserts are not loaded");
-		return self.maps[mapName].json;
+		return self.maps[mapName];
 	};
 
 	self.getTileset = function(setName)
