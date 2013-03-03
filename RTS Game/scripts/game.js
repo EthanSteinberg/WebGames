@@ -14,10 +14,6 @@ define(["canvas","assetManager","inputManager","view","character","building","si
 			this.inputManager.suppress(40);
 			this.sideBar = new sideBar.SideBar();
 
-			this.inputManager.addClickHandler(function(x,y)
-			{
-				console.log(x,y);
-			});
 
 			this.view = new view.View(this);
 

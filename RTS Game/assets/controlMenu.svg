@@ -28,18 +28,29 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="240.70052"
-     inkscape:cy="292.4622"
+     inkscape:cx="355.58311"
+     inkscape:cy="219.80376"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
-     showgrid="false"
+     showgrid="true"
      inkscape:object-nodes="true"
      inkscape:snap-page="true"
      inkscape:window-width="1920"
      inkscape:window-height="1137"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     showguides="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2987"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true"
+       spacingx="50px"
+       spacingy="50px" />
+  </sodipodi:namedview>
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -48,7 +59,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -86,5 +97,27 @@
        height="350"
        x="0"
        y="702.36218" />
+    <g
+       id="g2995-1"
+       transform="matrix(1,0,0,0.5,0,276.18109)">
+      <rect
+         y="1152.3622"
+         x="0"
+         height="100"
+         width="200"
+         id="rect2987-7"
+         style="fill:#999999;fill-opacity:1;stroke:none" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text2989-4"
+         y="989.86218"
+         x="33.92857"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           id="tspan2993-0"
+           y="989.86218"
+           x="33.92857"
+           sodipodi:role="line" /></text>
+    </g>
   </g>
 </svg>

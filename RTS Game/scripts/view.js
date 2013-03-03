@@ -16,8 +16,8 @@ define(function(){
 
 		game.inputManager.setClickManipulator(function(x,y)
 		{
-			var realX = Math.floor(x/32 + this.x);
-			var realY = Math.floor(y/32 + this.y);
+			var realX = x/32 + this.x;
+			var realY = y/32 + this.y;
 
 			return {x:realX, y: realY};
 		}.bind(this));

@@ -87,6 +87,32 @@ define(["canvas", "assetManager","inputManager"] , function(canvas,assetManager,
 				this.canvas.ctx.fillText(button.name,50+100*column,55 + 50*row);
 			}
 
+			this.canvas.ctx.font = "21px sans-serif";
+			this.canvas.ctx.fillText("Status",100,212.5);
+
+
+			for (var i = 0; i < this.mode.statuses.length; i++)
+			{
+				var status = this.mode.statuses[i];
+				this.canvas.ctx.font = "15px sans-serif";
+				this.canvas.ctx.fillText(status.name + ":",25,262.5);
+
+				if (status.type === "bar")
+				{
+					var currentStatus = status.dataFunc();
+
+					this.canvas.ctx.fillStyle = "red";
+					this.canvas.ctx.fillRect(50,262.5,137.5,25);
+					this.canvas.ctx.fillStyle = "green";
+					this.canvas.ctx.fillRect(50,262.5,137.5 * currentStatus.current/currentStatus.max,25);
+					this.canvas.ctx.fillStyle = "black";
+					this.canvas.ctx.fillText(currentStatus.current + "/" + currentStatus.max,118.75,265);
+				}
+			}
+			
+
+
+
 		}
 
 		

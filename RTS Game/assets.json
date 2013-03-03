@@ -9,6 +9,9 @@
 		},
 		"controlMenu" : {
 			"url" : "controlMenu.png"
+		},
+		"sword1" : {
+			"url" : "sword1.png"
 		}
 	},
 	"maps" : {
@@ -16,12 +19,22 @@
 			"url" : "tilemap.json"
 		}
 	},
-	"tilesets" : {
-		"firstTileMap": {
-			"tiles" : {
-				"1": "tileone",
-				"2": "tiletwo"
-			}
+	"cursors" : {
+		"select": {
+			"x": 0,
+			"y": 0
+		},
+		"move" : {
+			"x": 13,
+			"y": 13
+		},
+		"no" : {
+			"x": 13,
+			"y": 13 
+		},
+		"attack": {
+			"x": 13,
+			"y": 13
 		}
 	}
 }

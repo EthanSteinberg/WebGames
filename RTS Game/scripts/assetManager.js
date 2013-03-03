@@ -74,7 +74,7 @@ define(["tilemap"], function(tilemap)
 		{
 			console.log(json);
 			self.directory = json.directory;
-			self.tilesets = json.tilesets;
+			self.cursors = json.cursors;
 			loadImages(json.images, function()
 			{
 				loadMaps(json.maps,function()
@@ -105,11 +105,12 @@ define(["tilemap"], function(tilemap)
 		return self.maps[mapName];
 	};
 
-	self.getTileset = function(setName)
+	self.getCursor = function(cursorName)
 	{
 		console.assert(self.loaded === true,"Asserts are not loaded");
-		return self.tilesets[setName];
+		return self.cursors[cursorName];
 	};
+
 
 	return self;
 });
